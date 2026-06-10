@@ -770,6 +770,36 @@ h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.25; color: var(--
 }
 
 /* ============================================================
+   Презентационные «псевдо-поля» для импорта дизайна
+   (html.to.design пропускает нативные input/select/button —
+   на макетной странице используем визуально идентичные div).
+   ============================================================ */
+.mockbox {
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--muted);
+  font: 400 15.5px var(--font-body);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.mockbox--filled { color: var(--text); }
+.mockbox svg { width: 18px; height: 18px; stroke: var(--muted); flex-shrink: 0; }
+.mockcheck { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; }
+.mockcheck .box {
+  width: 19px; height: 19px;
+  border: 1.5px solid var(--green-600);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ============================================================
    Полностью статичный сайт (на всех страницах):
    отключены все переходы/анимации и эффекты при наведении
    (:hover) и нажатии (:active). Сохранён только :focus-visible
